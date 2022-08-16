@@ -17,10 +17,11 @@
 	],
 	"author": "Artem Balanovsky",
 	"license": "ISC",
-
 	"dependencies": {
 		"axios": "^0.27.2",
 		"chalk": "^5.0.1",
-		"dedent-js": "^1.0.1"
+		"dedent": "^0.7.0",
+		"dedent-js": "^1.0.1",
+		"js": "^0.1.0"
 	}
 }
