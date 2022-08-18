@@ -17,7 +17,24 @@ const printHelp = () => {
         -h to show the Help window
         -t [API_KEY] to save the token
         `
-    )
-}
+    );
+};
 
-export { printError, printSuccess, printHelp };
+const printWeather = (res, icon) => {
+        console.log(
+        dedent`
+        
+        
+        ${chalk.bgYellow(' WEATHER ')} Погода на острове ${res.name}
+        ${icon}  ${res.weather[0].description}
+        Температура: ${res.main.temp} (ощущается как ${res.main.feels_like})
+        Влажность: ${res.main.humidity}%
+        Скорость ветра: ${res.wind.speed} м/с
+        Атмосферное давление: ${res.main.pressure} бар
+        
+        
+        `
+    );
+};
+
+export { printError, printSuccess, printHelp, printWeather };
